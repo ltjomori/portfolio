@@ -1,0 +1,11 @@
+packages:
+  "framer-motion": "For smooth scroll animations and page transitions"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility for merging tailwind classes safely"
+  "@radix-ui/react-slot": "Required for accessible button components"
+
+images: []
+
+notes:
+  - Pure frontend static portfolio, no backend needed.
+  - Using framer-motion for intersection observer fade-ins and scroll animations.

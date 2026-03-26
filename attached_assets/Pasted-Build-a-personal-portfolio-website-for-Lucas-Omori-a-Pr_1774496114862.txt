@@ -1,0 +1,27 @@
+Build a personal portfolio website for Lucas Omori, a Product Manager based in NYC. The site should feel modern, bold, and startup-friendly — not corporate. Use a clean dark or light background with a strong typographic hierarchy and a signature gradient color scheme going from orange → pink → purple (used as accents, not overwhelming the whole page).
+Sections to include:
+Hero — Name "Lucas Omori", title "Product Manager", a one-liner like "I build products at the intersection of data and human experience." Include a CTA button "View My Work" and a subtle animated gradient accent.
+About — Short paragraph: UC Berkeley Data Science grad, currently Associate PM at Mastercard working on a data SaaS product for banks. Previously worked for Cisco Meraki, Microsoft and Atlassian.
+Experience — Card-based layout, one card per role, displayed in reverse chronological order (most recent first):
+
+Mastercard (Associate PM, Aug 2025 – Present) — Leading 0→1 development of a new AI analytics product to unlock 400+ issuer growth opportunities. Scaled UI enhancements across three regional platforms, improving usability by 60% and reducing churn by 15%.
+Cisco Meraki (PM Intern, Sep – Dec 2024) — Designed AI assistant intents across networking products impacting 750k customers. Built an LLM-powered feedback prioritization dashboard to align roadmap decisions to measurable OKRs.
+Mastercard (APM Intern, Jun – Aug 2024) — Delivered an AI assistant MVP to 300+ clients, automating analytics queries and driving 25% platform adoption growth. Accelerated European market expansion by onboarding 100+ international clients and cutting data validation errors by 40%.
+Microsoft (PM Intern, Sep – Dec 2023) — Shaped the accessibility roadmap for Microsoft Word through competitive analysis and 25+ user interviews. Authored technical specs for hyperlink inspection and navigation improvements currently in development.
+Atlassian (Product Marketing Intern, Sep 2022 – Jan 2023) — Launched a GTM strategy for an enterprise product targeting 200k+ users. Drove adoption of Confluence and Trello through data-driven persona analysis and targeted campaigns.
+
+Projects — Dedicated full page/section for side projects. Currently one project:
+
+Cookmi — A personalized recipe book that consolidates all your favorite social media meals, snacks, and desserts into one place. Currently in development. Style the card with a "Coming Soon" or "In Development" badge.
+Leave 2 placeholder card slots styled consistently so more projects can be added later.
+
+Beyond Work — Short section showing personality: into vlogging, music, and attending live concerts (40+ and counting). Frame it as: creative communicator, audience builder, entrepreneurial spirit.
+Contact — Email button that copies lucastjomori@gmail.com to clipboard on click with a small visual confirmation ("Copied!"). Link to LinkedIn (https://www.linkedin.com/in/lucasomori/) and resume (https://drive.google.com/file/d/1Vow43qSKBYuxpdfO3fT682QglBri9wnQ/view?usp=drive_link).
+Design details:
+
+Font: modern sans-serif (Inter or DM Sans)
+Gradient: orange → pink → purple used on CTAs, hover states, and subtle accents
+Smooth scroll, subtle fade-in animations on scroll
+Fully responsive (mobile-friendly)
+Simple sticky top nav with anchor links: About, Experience, Projects, Contact
+Each experience card should show the company name, role title, and date range prominently
