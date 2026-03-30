@@ -2,29 +2,36 @@ import { motion } from "framer-motion"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight } from "lucide-react"
+import cookmiBanner from "@/assets/cookmi-preview.png"
 
 export function Projects() {
   const projects = [
     {
       title: "Cookmi",
-      description: "A personalized recipe book that consolidates all your favorite social media meals, snacks, and desserts into one place.",
-      badge: "In Development",
-      badgeVariant: "gradient" as const,
-      active: true
+      description: "Your personal digital cookbook. Save meals from TikTok, Instagram, and YouTube in one place — no more losing recipes in your likes.",
+      badge: "Live",
+      badgeVariant: "success" as const,
+      active: true,
+      url: "https://cookmi.vercel.app",
+      image: cookmiBanner
     },
     {
       title: "Placeholder Project",
       description: "A new idea currently brewing. More details and case study will be published once the MVP is finalized.",
       badge: "Coming Soon",
       badgeVariant: "secondary" as const,
-      active: false
+      active: false,
+      url: null,
+      image: null
     },
     {
       title: "Placeholder Project",
       description: "Exploring the intersection of LLMs and personal productivity. Check back later for updates.",
       badge: "Coming Soon",
       badgeVariant: "secondary" as const,
-      active: false
+      active: false,
+      url: null,
+      image: null
     }
   ]
 
@@ -52,34 +59,54 @@ export function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="h-full"
             >
-              <Card className={`h-full flex flex-col ${
-                project.active 
-                  ? "bg-card/50 hover:bg-card hover:-translate-y-1 border-white/10 hover:border-pink-500/50 cursor-pointer group" 
-                  : "bg-secondary/20 border-white/5 opacity-60 grayscale-[50%]"
-                } transition-all duration-300 relative overflow-hidden`}
-              >
-                {project.active && (
-                  <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 duration-300">
-                    <ArrowUpRight className="w-6 h-6 text-pink-500" />
-                  </div>
-                )}
-                
-                <CardHeader className="pb-4">
-                  <div className="mb-4">
-                    <Badge variant={project.badgeVariant}>{project.badge}</Badge>
-                  </div>
-                  <CardTitle className="text-xl text-white font-bold">{project.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1">
-                  <CardDescription className="text-base leading-relaxed">
-                    {project.description}
-                  </CardDescription>
-                </CardContent>
-                
-                {project.active && (
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-                )}
-              </Card>
+              {project.active && project.url ? (
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="h-full block">
+                  <Card className="h-full flex flex-col bg-card/50 hover:bg-card hover:-translate-y-1 border-white/10 hover:border-pink-500/50 cursor-pointer group transition-all duration-300 relative overflow-hidden">
+                    
+                    {project.image && (
+                      <div className="w-full h-44 overflow-hidden">
+                        <img
+                          src={project.image}
+                          alt={`${project.title} preview`}
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    )}
+
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <ArrowUpRight className="w-6 h-6 text-pink-500" />
+                    </div>
+
+                    <CardHeader className="pb-4">
+                      <div className="mb-4">
+                        <Badge variant={project.badgeVariant}>{project.badge}</Badge>
+                      </div>
+                      <CardTitle className="text-xl text-white font-bold">{project.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-1">
+                      <CardDescription className="text-base leading-relaxed">
+                        {project.description}
+                      </CardDescription>
+                    </CardContent>
+
+                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+                  </Card>
+                </a>
+              ) : (
+                <Card className="h-full flex flex-col bg-secondary/20 border-white/5 opacity-60 grayscale-[50%] transition-all duration-300 relative overflow-hidden">
+                  <CardHeader className="pb-4">
+                    <div className="mb-4">
+                      <Badge variant={project.badgeVariant}>{project.badge}</Badge>
+                    </div>
+                    <CardTitle className="text-xl text-white font-bold">{project.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <CardDescription className="text-base leading-relaxed">
+                      {project.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              )}
             </motion.div>
           ))}
         </div>
