@@ -8,7 +8,7 @@ export function Projects() {
   const projects = [
     {
       title: "Cookmi",
-      description: "Your personal digital cookbook. Save meals from TikTok, Instagram, and YouTube in one place — no more losing recipes in your likes.",
+      description: "Your personal digital cookbook. Save meals from TikTok, Instagram, and YouTube in one place — no more losing recipes in your saved folders.",
       badge: "Live",
       badgeVariant: "success" as const,
       active: true,
@@ -16,8 +16,8 @@ export function Projects() {
       image: cookmiBanner
     },
     {
-      title: "Placeholder Project",
-      description: "A new idea currently brewing. More details and case study will be published once the MVP is finalized.",
+      title: "Spur",
+      description: "Should you buy an upcoming cocert or festival ticket now or wait for resale? Get a prediction on retail and resale cost of events.",
       badge: "Coming Soon",
       badgeVariant: "secondary" as const,
       active: false,
